@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.336125,
+          45.441389
+        ]
+      },
+      "properties": {
+        "alias": "VE01",
+        "description": "",
+        "id": "OL01",
+        "twitter_enabled": 1,
+        "district": "VE",
+        "location": "rugadopozzi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.321028,
+          45.43375
+        ]
+      },
+      "properties": {
+        "alias": "VE02",
+        "description": "",
+        "id": "OL02",
+        "twitter_enabled": 1,
+        "district": "VE",
+        "location": "ognissanti"
+      }
+    }
+  ]
+}
