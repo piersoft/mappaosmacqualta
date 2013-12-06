@@ -53,7 +53,7 @@ function microAjax(B,A){this.bindFunction=function(E,D){return function(){return
                         onEachFeature:function onEachFeature(feature, layer) {
                                 if (feature.properties && feature.properties.id) {
 										var string='ID: '+feature.properties.id+"<br/>"+'Location: '+feature.properties.location;
-										if (feature.properties.twitter_enabled && feature.properties.twitter_enabled == 1) string+="<br/><img src='twitter.png'/>"
+										if (feature.properties.twitter_enabled && feature.properties.twitter_enabled == 1) string+="<br/><img src='https://f.cloud.github.com/assets/1304918/1693140/41adbcd2-5e89-11e3-85c0-278794202387.png'/>"
                                         layer.bindPopup(string);
                                 }
                         },
