@@ -63,6 +63,7 @@ function microAjax(B,A){this.bindFunction=function(E,D){return function(){return
                                 return marker;
                         }
                 }).addTo(map);
+                map.fitBounds(myLayer.getBounds());
         }
 
 microAjax('mappa.json',function (res) { 
