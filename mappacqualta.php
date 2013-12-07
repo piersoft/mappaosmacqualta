@@ -5,6 +5,9 @@ $file = "mappa.json";
 $src = fopen($url, 'r');
 $dest = fopen($file, 'w');
 stream_copy_to_stream($src, $dest);
+//echo stream_copy_to_stream($src, $dest) . "";
+//sleep(1);
+//header("Location:http://www.apposta.biz/prove/mappacqualta.html");
 
 ?>
 
@@ -75,7 +78,7 @@ function microAjax(B,A){this.bindFunction=function(E,D){return function(){return
         };
         L.control.layers(baseMaps).addTo(map);
 
-      //  var ico=L.icon({iconUrl:'ico.png', iconSize:[20,20],iconAnchor:[10,0]});
+       var ico=L.icon({iconUrl:'ico.png', iconSize:[20,20],iconAnchor:[10,0]});
        var markers = L.markerClusterGroup({spiderfyOnMaxZoom: true, showCoverageOnHover: false});
        
         function loadLayer(url)
@@ -86,7 +89,7 @@ function microAjax(B,A){this.bindFunction=function(E,D){return function(){return
                                 }
                         },
                         pointToLayer: function (feature, latlng) {                
-                        var marker = new L.Marker(latlng); //, { icon: icon });
+                        var marker = new L.Marker(latlng, { icon: ico });
                         markers[feature.properties.id] = marker;
                         return marker;
                         }
