@@ -5,9 +5,6 @@ $file = "mappa.json";
 $src = fopen($url, 'r');
 $dest = fopen($file, 'w');
 stream_copy_to_stream($src, $dest);
-//echo stream_copy_to_stream($src, $dest) . "";
-//sleep(1);
-//header("Location:http://www.apposta.biz/prove/mappacqualta.html");
 
 ?>
 
