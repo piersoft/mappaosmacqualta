@@ -74,7 +74,7 @@ function microAjax(B,A){this.bindFunction=function(E,D){return function(){return
         
         var baseMaps = {
     "Mapnik": osm,
-    "Mapquest Open": mapquest        
+    "Mapquest Open": mapquest       
         };
         L.control.layers(baseMaps).addTo(map);
 
@@ -113,15 +113,15 @@ var feat=JSON.parse(res);
 if(feat['status']=='success')
 {
     var last=feat['data'][0];
-    var text="ID: "+jsonref.properties.id+"<br/>";
+    var text="Location: <b>"+jsonref.properties.location+"</b><br/>";
     var date=new Date(last['date_sent']);
     var d = date.getDate();
     var m = date.getMonth() + 1;
     var y = date.getFullYear();
     var formatdate=date.getHours()+':'+date.getMinutes()+':'+date.getSeconds()+' '+(d <= 9 ? '0' + d : d)+'/'+(m<=9 ? '0' + m : m)+'/'+y;
-    text+="Ultima ricezione: "+formatdate+"<br/>";
-    text+="Livello: "+last['level']+" cm<br/>";
-    text+="Temperatura: "+last['temperature']+" &deg;C<br/>";
+    text+="Ultima ricezione: <b>"+formatdate+"</b><br/>";
+    text+="Livello: <b>"+last['level']+" cm</b><br/>";
+    text+="Temperatura: <b>"+last['temperature']+" &deg;C</b><br/>";
     if(last['twitter_enabled']==1)
     {
         text+="<img src='twitter.png' style='display:inline-block'/>";
